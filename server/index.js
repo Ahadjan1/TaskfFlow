@@ -10,9 +10,16 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: true, // Temporarily allow all origins to debug CORS
   credentials: true,
 }));
+
+// Request logger
+app.use((req, res, next) => {
+  console.log(`📡 ${req.method} ${req.url}`);
+  next();
+});
+
 app.use(express.json());
 
 // Routes
