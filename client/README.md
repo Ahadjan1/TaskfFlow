@@ -1,16 +1,38 @@
-# React + Vite
+# 🖥️ TaskFlow — React Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React frontend application for the **TaskFlow** system. It is powered by React (v19), Vite (v8) for fast development, Recharts for dynamic dashboard visualization, and custom styled glassmorphic Vanilla CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Getting Started
 
-## React Compiler
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Run Local Development Server
+```bash
+npm run dev
+```
+*   The application will start locally on `http://localhost:5173`.
+*   Make sure your backend server is running on `http://localhost:5000` (or configure the environment appropriately).
 
-## Expanding the ESLint configuration
+### 3. Production Build
+To create a optimized production build of the static files:
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Features Implemented
+*   **📊 Analytics Dashboard:** Interactive task metrics, priority break-downs, and completion rate graphs with `Recharts`.
+*   **📋 Kanban Task Board:** Dynamic categorization of tasks (Todo, In Progress, Done).
+*   **📝 Task & Subtask Modals:** Create, view, edit tasks and manage subtask checklists in real time.
+*   **🔒 Auth Interceptors:** Secured pages with automatic redirection for non-authenticated sessions.
+*   **👤 Custom Profile Modal:** Direct password changes, user information viewing, and account details.
+
+---
+
+*For full project configuration, backend variables, and MySQL database setup, please refer to the [Root README.md](../README.md).*
